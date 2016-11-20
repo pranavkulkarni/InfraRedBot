@@ -1,0 +1,174 @@
+{
+  "digital ocean": [
+    {
+      "InstanceType": "512mb",
+      "Cost": 0.007,
+      "VRAM": 0.5,
+      "VCPUs": 1,
+      "Storage": 20
+    },
+    {
+      "InstanceType": "1gb",
+      "Cost": 0.015,
+      "VRAM": 1,
+      "VCPUs": 1,
+      "Storage": 30
+    },
+    {
+      "InstanceType": "2gb",
+      "Cost": 0.03,
+      "VRAM": 2,
+      "VCPUs": 2,
+      "Storage": 40
+    },
+    {
+      "InstanceType": "4gb",
+      "Cost": 0.06,
+      "VRAM": 4,
+      "VCPUs": 2,
+      "Storage": 60
+    },
+    {
+      "InstanceType": "8gb",
+      "Cost": 0.119,
+      "VRAM": 8,
+      "VCPUs": 4,
+      "Storage": 80
+    },
+    {
+      "InstanceType": "16gb",
+      "Cost": 0.238,
+      "VRAM": 16,
+      "VCPUs": 8,
+      "Storage": 160
+    },
+    {
+      "InstanceType": "32gb",
+      "Cost": 0.476,
+      "VRAM": 32,
+      "VCPUs": 12,
+      "Storage": 320
+    },
+    {
+      "InstanceType": "48gb",
+      "Cost": 0.714,
+      "VRAM": 48,
+      "VCPUs": 16,
+      "Storage": 480
+    },
+    {
+      "InstanceType": "64gb",
+      "Cost": 0.952,
+      "VRAM": 64,
+      "VCPUs": 20,
+      "Storage": 640
+    }
+  ],
+  "aws": [
+    {
+      "InstanceType": "t2.nano",
+      "Cost": 0.0065,
+      "VRAM": 0.5,
+      "VCPUs": 1,
+      "Storage": 20
+    },
+    {
+      "InstanceType": "t2.micro",
+      "Cost": 0.013,
+      "VRAM": 1,
+      "VCPUs": 1,
+      "Storage": 30
+    },
+    {
+      "InstanceType": "t2.small",
+      "Cost": 0.026,
+      "VRAM": 2,
+      "VCPUs": 1,
+      "Storage": 40
+    },
+    {
+      "InstanceType": "t2.medium",
+      "Cost": 0.052,
+      "VRAM": 4,
+      "VCPUs": 2,
+      "Storage": 60
+    },
+    {
+      "InstanceType": "t2.large",
+      "Cost": 0.104,
+      "VRAM": 8,
+      "VCPUs": 2,
+      "Storage": 80
+    },
+    {
+      "InstanceType": "m4.large",
+      "Cost": 0.12,
+      "VRAM": 8,
+      "VCPUs": 2,
+      "Storage": 160
+    },
+    {
+      "InstanceType": "m4.xlarge",
+      "Cost": 0.239,
+      "VRAM": 16,
+      "VCPUs": 4,
+      "Storage": 320
+    },
+    {
+      "InstanceType": "m4.2xlarge",
+      "Cost": 0.479,
+      "VRAM": 32,
+      "VCPUs": 8,
+      "Storage": 480
+    },
+    {
+      "InstanceType": "m4.4xlarge",
+      "Cost": 0.958,
+      "VRAM": 64,
+      "VCPUs": 16,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m4.10xlarge",
+      "Cost": 2.394,
+      "VRAM": 160,
+      "VCPUs": 40,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m4.16xlarge",
+      "Cost": 3.83,
+      "VRAM": 256,
+      "VCPUs": 64,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m3.medium",
+      "Cost": 0.067,
+      "VRAM": 3.75,
+      "VCPUs": 1,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m3.large",
+      "Cost": 0.133,
+      "VRAM": 7.5,
+      "VCPUs": 2,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m3.xlarge",
+      "Cost": 0.266,
+      "VRAM": 15,
+      "VCPUs": 4,
+      "Storage": 640
+    },
+    {
+      "InstanceType": "m3.2xlarge",
+      "Cost": 0.532,
+      "VRAM": 30,
+      "VCPUs": 8,
+      "Storage": 640
+    }
+  ]
+}

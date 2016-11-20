@@ -1,0 +1,18 @@
+{
+  "name": "infraredbot",
+  "version": "1.0.0",
+  "description": "InfraRed Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ATeamNoPlanB",
+  "dependencies": {
+    "botkit": "^0.2.2",
+    "slackbots": "^0.5.1",
+    "request": "^2.67.0",
+    "bluebird": "^3.2.2",
+    "parse-link-header": "^0.4.1",
+    "apiai": "^3.0.2"
+  }
+}

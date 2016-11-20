@@ -1,0 +1,201 @@
+{ 
+  "UserId":"U279LFT0T",
+  "Reservations": 
+  [
+    { "ReservationId": "r-c9f6a67e",
+      "request": {
+        "OS": "Ubuntu 14.04",
+        "VCPUs": 4,
+        "VRAM": 32,
+        "Storage": 400,
+        "StorageType": "SSD"
+      },
+      "type":"vm",
+      "cluster_info": null,
+      "Instances": 
+      [
+        { "InstanceId": "i-0c2faa1a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-22.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 19:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.89",
+           "PublicIpAddress": "54.158.18.22"
+        },
+        { "InstanceId": "i-1b2fbb2a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-23.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 21:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.90",
+           "PublicIpAddress": "54.158.18.23"
+        }
+      ]
+    },
+
+    {
+  "ReservationId": "r-28e14199",
+  "OwnerId": "694933028820",
+  "Groups": [],
+  "Instances": [
+    {
+      "InstanceId": "i-c1c04dcf",
+      "ImageId": "ami-40d28157",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PrivateDnsName": "ip-172-31-58-22.ec2.internal",
+      "PublicDnsName": "ec2-52-207-219-28.compute-1.amazonaws.com",
+      "StateTransitionReason": "",
+      "AmiLaunchIndex": 0,
+      "ProductCodes": [],
+      "InstanceType": "t2.micro",
+      "LaunchTime": "2016-11-03T03:56:03.000Z",
+      "Placement": {
+        "AvailabilityZone": "us-east-1b",
+        "GroupName": "",
+        "Tenancy": "default"
+      },
+      "Monitoring": {
+        "State": "disabled"
+      },
+      "SubnetId": "subnet-797f2952",
+      "VpcId": "vpc-d278b9b6",
+      "PrivateIpAddress": "172.31.58.22",
+      "PublicIpAddress": "52.207.219.28",
+      "Architecture": "x86_64",
+      "RootDeviceType": "ebs",
+      "RootDeviceName": "/dev/sda1",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/sda1",
+          "Ebs": {
+            "VolumeId": "vol-9def6d49",
+            "Status": "attached",
+            "AttachTime": "2016-11-03T03:56:04.000Z",
+            "DeleteOnTermination": true
+          }
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "ClientToken": "",
+      "Tags": [],
+      "SecurityGroups": [
+        {
+          "GroupName": "default",
+          "GroupId": "sg-f6675891"
+        }
+      ],
+      "SourceDestCheck": true,
+      "Hypervisor": "xen",
+      "NetworkInterfaces": [
+        {
+          "NetworkInterfaceId": "eni-90e7c16c",
+          "SubnetId": "subnet-797f2952",
+          "VpcId": "vpc-d278b9b6",
+          "Description": "",
+          "OwnerId": "694933028820",
+          "Status": "in-use",
+          "MacAddress": "12:5a:ff:64:4b:2c",
+          "PrivateIpAddress": "172.31.58.22",
+          "PrivateDnsName": "ip-172-31-58-22.ec2.internal",
+          "SourceDestCheck": true,
+          "Groups": [
+            {
+              "GroupName": "default",
+              "GroupId": "sg-f6675891"
+            }
+          ],
+          "Attachment": {
+            "AttachmentId": "eni-attach-9c44f92c",
+            "DeviceIndex": 0,
+            "Status": "attached",
+            "AttachTime": "2016-11-03T03:56:03.000Z",
+            "DeleteOnTermination": true
+          },
+          "Association": {
+            "PublicIp": "52.207.219.28",
+            "PublicDnsName": "ec2-52-207-219-28.compute-1.amazonaws.com",
+            "IpOwnerId": "amazon"
+          },
+          "PrivateIpAddresses": [
+            {
+              "PrivateIpAddress": "172.31.58.22",
+              "PrivateDnsName": "ip-172-31-58-22.ec2.internal",
+              "Primary": true,
+              "Association": {
+                "PublicIp": "52.207.219.28",
+                "PublicDnsName": "ec2-52-207-219-28.compute-1.amazonaws.com",
+                "IpOwnerId": "amazon"
+              }
+            }
+          ]
+        }
+      ],
+      "EbsOptimized": false
+    }
+  ]
+},
+
+    { "ReservationId": "r-c9f6a87e",
+      "request": {
+        "OS": "Ubuntu 14.04",
+        "VCPUs": 8,
+        "VRAM": 64,
+        "Storage": 1024,
+        "StorageType": "spindle"
+      },
+      "type":"cluster",
+      "cluster_info": {
+        "zeppelin": "http://54.158.18.22:8015",
+        "ambari": "http://54.158.18.23:8080"
+      },
+
+      "Instances": 
+      [
+        { "InstanceId": "i-0c2faa1a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-22.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 19:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.89",
+           "PublicIpAddress": "54.158.18.22"
+        },
+        { "InstanceId": "i-1b2fbb3a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-23.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 21:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.90",
+           "PublicIpAddress": "54.158.18.23"
+        },
+        { "InstanceId": "i-1b2fbb4a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-23.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 21:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.90",
+           "PublicIpAddress": "54.158.18.23"
+        },    
+        { "InstanceId": "i-1b2fbb5a",
+           "ImageId": "ami-1624987f",
+           "State": { "Code": 16, "Name": "running" },
+           "PublicDnsName": "ec2-54-158-18-23.compute-1.amazonaws.com",
+           "InstanceType": "t1.micro",
+           "LaunchTime": "Mon Oct 17 2016 21:28:53 GMT-0400 (EDT)",
+           "PrivateIpAddress": "172.31.1.90",
+           "PublicIpAddress": "54.158.18.23"
+        }
+
+      ]
+    } 
+  ]
+ }
+
+
