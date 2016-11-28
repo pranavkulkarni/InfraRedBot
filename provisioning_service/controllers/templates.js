@@ -113,7 +113,7 @@ exports.get_templates = function(req, res) {
             return res.send({"status": 500, "message": "Internal Server Error"});
         } else {
             console.log(result);
-            if(result == null) {
+            if(result == null || result.length == 0) {
                 console.log("Could not find any template for this user.", err);
                 return res.send({"status": 400, "message": "You don't have any templates saved"});
             }

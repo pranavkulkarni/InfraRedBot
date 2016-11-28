@@ -1,5 +1,5 @@
 var request = require('request');
-var provisioning_service_url = "http://localhost:3001";
+var provisioning_service_url = "http://provision:3001";
 
 function post(params, url, callback) {
 	var options = {
@@ -270,7 +270,7 @@ module.exports = {
 				bot.reply(message, "Spark Cluster Created! \nYour Reservation Id is : " + body.data.Reservation.ReservationId + "\n>Zeppelin Link : " + body.data.Reservation.MasterPublicDnsName + ":8890");
 			} else {
 				console.log(error);
-				bot.reply(message, "Sorry, your cluster reservation was not successful!");
+				bot.reply(message, body.message + " Sorry, your cluster reservation was not successful!");
 			}
 		};
 
@@ -294,7 +294,8 @@ module.exports = {
 				bot.reply(message, formatted_results);
 			} else {
 				console.log(error);
-				bot.reply(message, "Sorry, I was not able to fetch your reservations at this time.");
+				bot.reply(message,body.message);
+				//bot.reply(message, "Sorry, I was not able to fetch your reservations at this time.");
 			}
 		};
 
@@ -322,7 +323,7 @@ module.exports = {
 				bot.reply(message, formatted_results);
 			} else {
 				console.log(error);
-				bot.reply(message, "Sorry, I was not able to fetch your reservation at this time.");
+				bot.reply(message, body.message);
 			}
 		};
 
@@ -474,8 +475,9 @@ module.exports = {
 						var details = "Spark Cluster Created! \n Zeppelin Link : " + body.data.Reservation.MasterPublicDnsName + ":8890";
 						bot.reply(message, details);
 					}
-				} else {
-					bot.reply(message, "Sorry, your reservation was not successful!");
+				} 
+				else {
+					bot.reply(message, body.message);
 				}
 			}
 

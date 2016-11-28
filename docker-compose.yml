@@ -1,0 +1,22 @@
+version: '2'
+services:
+  bot:
+    build: ./bot_apiai/
+    links:
+      - "prov:provision"
+    environment:
+      - APIAITOKEN=${ALTCODETOKEN}
+      - ALTCODETOKEN=${ALTCODETOKEN}
+    depends_on:
+      - "prov"
+
+  prov:
+    build: ./provisioning_service/
+    links:
+      - "db:database"
+    depends_on:
+      - "db"
+
+  db:
+    image: mongo:3.2.11
+    command: "--smallfiles" 

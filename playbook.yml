@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: test connection
+      ping:
+    - name: set ENV
+      shell: export X_APIAITOKEN=9b400ac64c96406ca1c0f5591655a02f
+    - name: Install Docker 
+      shell: curl -sSL https://get.docker.com/ | sh 
+    - name: Setup Docker 
+      shell: usermod -aG docker root
+    - name: Setup GIT
+      apt:
+        name: git 
+    - name: Pull Latest code
+      git: repo=https://github.com/vramakr2/InfraRedBot.git dest=/infrared/

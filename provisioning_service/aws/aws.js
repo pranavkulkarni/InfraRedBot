@@ -126,7 +126,7 @@ module.exports =
                 
                 if(result == null) {
                     console.log("Could not fetch keys from database", err);
-                    return res.send({"status": 401, "message": "Unauthorized"});
+                    return res.send({"status": 401, "message": "Please set up your keys with a service provider before creating any reservation."});
                 }
 
                 AWS.config.accessKeyId = result.AccessKeyId;

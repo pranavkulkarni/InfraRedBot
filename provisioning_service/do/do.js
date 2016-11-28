@@ -32,7 +32,7 @@ module.exports =
                 var ssh_key = parseInt(result.KeyPair);
                 var name = "DevOps-Node";
                 var region = "nyc3";
-                var image = req.body.OS.includes("buntu") ? "ubuntu-16-04-x64" : "centos-6-5-x64"
+                var image = (req.body.OS.indexOf("buntu") > -1) ? "ubuntu-16-04-x64" : "centos-6-5-x64";
 
                 client.createDroplet(name, type, region, image, ssh_key, function(err, resp, body)
                 {

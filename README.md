@@ -23,3 +23,7 @@ Team Members:
 ## Milestone: Service
 
 [SERVICE.md](https://github.ncsu.edu/vramakr2/InfraRed/blob/master/SERVICE.md)
+
+## Milestone: Deployment
+
+[Deploy.md](https://github.ncsu.edu/vramakr2/InfraRed/blob/master/Deploy.md)

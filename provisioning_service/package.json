@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "aws-sdk": ">= 2.0.9",
     "body-parser": "~1.15.2",
     "express": "4.x",
-    "sleep": "^4.0.0",
-    "aws-sdk": ">= 2.0.9",
-    "node-uuid": ">= 1.4.1",
+    "forever": "^0.15.3",
     "needle": "^0.7.10",
+    "node-uuid": ">= 1.4.1",
     "request": "^2.67.0"
   },
   "devDependencies": {
