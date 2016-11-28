@@ -241,7 +241,13 @@ module.exports = {
 
 			} else {
 				console.log(error);
-				bot.reply(message, body.message + ". Sorry, your reservation was not successful!");
+				if(body != null){
+					bot.reply(message, body.message + ". Sorry, your reservation was not successful!");
+				}
+				else{
+					bot.reply(message, "We are facing technical issues. Please try again later. Sorry, your reservation was not successful!");
+				}
+	
 			}
 		};
 
@@ -270,7 +276,12 @@ module.exports = {
 				bot.reply(message, "Spark Cluster Created! \nYour Reservation Id is : " + body.data.Reservation.ReservationId + "\n>Zeppelin Link : " + body.data.Reservation.MasterPublicDnsName + ":8890");
 			} else {
 				console.log(error);
-				bot.reply(message, body.message + " Sorry, your cluster reservation was not successful!");
+				if(body != null){
+					bot.reply(message, body.message + ". Sorry, your cluster reservation was not successful!");
+				}
+				else{
+					bot.reply(message, "We are facing technical issues. Please try again later. Sorry, your cluster reservation was not successful!");
+				}
 			}
 		};
 
@@ -294,8 +305,13 @@ module.exports = {
 				bot.reply(message, formatted_results);
 			} else {
 				console.log(error);
-				bot.reply(message,body.message);
-				//bot.reply(message, "Sorry, I was not able to fetch your reservations at this time.");
+				//bot.reply(message,body.message);
+				if(body != null){
+					bot.reply(message, body.message + ". Sorry, I was not able to fetch your reservations at this time.");
+				}
+				else{
+					bot.reply(message, "We are facing technical issues. Please try again later. Sorry, couldn't fetch your reservations at this time.");
+				}
 			}
 		};
 
@@ -323,7 +339,12 @@ module.exports = {
 				bot.reply(message, formatted_results);
 			} else {
 				console.log(error);
-				bot.reply(message, body.message);
+				if(body != null){
+					bot.reply(message, body.message + ". Sorry, I was not able to fetch your reservation at this time.");
+				}
+				else{
+					bot.reply(message, "We are facing technical issues. Please try again later. Sorry, couldn't fetch your reservation at this time.");
+				}
 			}
 		};
 
@@ -350,7 +371,12 @@ module.exports = {
 					bot.reply(message, "Successfully terminated your reservation.");
 				} else {
 					console.log(error);
-					bot.reply(message, body.message + ". Sorry, I was not able to terminate your reservation.");
+					if(body != null){
+						bot.reply(message, body.message + ". Sorry, I was not able to terminate your reservation.");
+					}
+					else{
+						bot.reply(message, "We are facing technical issues. Please try again later. Sorry, I was not able to terminate your reservation.");
+					}
 				}
 			};
 
@@ -424,7 +450,12 @@ module.exports = {
 					bot.reply(message, "Your template has been saved successfully!");
 				} else {
 					console.log(error);
-					bot.reply(message, body.message + ". Sorry, couldn't save your template!");
+					if(body != null){
+						bot.reply(message, body.message + ". Sorry, couldn't save your template!");
+					}
+					else{
+						bot.reply(message, "We are facing technical issues. Please try again later. Sorry, couldn't save your template!");
+					}
 				}
 			};
 
@@ -446,14 +477,6 @@ module.exports = {
 			    "UserId": message.user,
 			    "TemplateName": response.result.parameters.template_name
 			};
-
-			/*
-			var callback = function (error, response, body) {
-				//body has the correct message set.
-				bot.reply(message, body.message);
-			};
-			*/
-
 
 			var callback = function(error, response, body) {
 				if(error == null && body.status == 201) {
@@ -477,7 +500,12 @@ module.exports = {
 					}
 				} 
 				else {
-					bot.reply(message, body.message);
+					if(body != null){
+						bot.reply(message, body.message + ". Sorry, couldn't create reservation using template!");
+					}
+					else{
+						bot.reply(message, "We are facing technical issues. Please try again later. Sorry, couldn't create reservation using template!");
+					}
 				}
 			}
 
@@ -519,7 +547,12 @@ module.exports = {
 				bot.reply(message, templatesDetails.join("\n\n"));
 			} else {
 				console.log(error);
-				bot.reply(message, body.message);
+				if(body != null){
+					bot.reply(message, body.message + ". Sorry, unable to show your templates!");
+				}
+				else{
+					bot.reply(message, "We are facing technical issues. Please try again later. Sorry, unable to show your templates!");
+				}
 			}
 		};
 

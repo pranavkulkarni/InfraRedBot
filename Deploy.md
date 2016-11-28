@@ -25,7 +25,7 @@ Install Docker-Compose:
 *	Deployment
 
 		docker-compose build
-		docker-compose run
+		docker-compose up
 * Tear-down
 
 		docker-compose down

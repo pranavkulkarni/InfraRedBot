@@ -2,17 +2,24 @@
 - hosts: all
   become: yes
   become_user: root
+  # Ubuntu 14.04
   tasks:
     - name: test connection
       ping:
-    - name: set ENV
-      shell: export X_APIAITOKEN=9b400ac64c96406ca1c0f5591655a02f
     - name: Install Docker 
       shell: curl -sSL https://get.docker.com/ | sh 
     - name: Setup Docker 
       shell: usermod -aG docker root
+    - name: Install PIP
+      apt: pkg=python-pip state=installed update_cache=true
+    - name: Install Docker-Compose
+      shell: pip install docker-compose
     - name: Setup GIT
       apt:
         name: git 
     - name: Pull Latest code
-      git: repo=https://github.com/vramakr2/InfraRedBot.git dest=/infrared/
+      git: repo=https://github.com/vramakr2/InfraRedBot.git dest=~/InfraRed
+    - name: Copy Tokens (1/2)
+      shell: echo "APIAITOKEN={{ lookup('env','APIAITOKEN') }}" >> /etc/environment
+    - name: Copy Token (2/2)
+      shell: echo "ALTCODETOKEN={{ lookup('env','ALTCODETOKEN') }}" >> /etc/environment
