@@ -13,4 +13,4 @@ RUN cd /src; npm install
 RUN npm install -g forever
 
 EXPOSE 3001 
-CMD ["forever", "start", "./src/server.js"]
+CMD ["forever", "./src/server.js"]

@@ -13,4 +13,4 @@ RUN cd /src; npm install
 RUN npm install -g forever
 
 EXPOSE 3000 
-CMD ["forever", "start", "./src/bot.js"]
+CMD ["forever", "./src/bot.js"]
