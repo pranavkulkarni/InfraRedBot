@@ -9,6 +9,8 @@ RUN     yum install -y npm
 COPY . /src
 # Install app dependencies
 RUN cd /src; npm install
+# Install Forever
+RUN npm install -g forever
 
 EXPOSE 3001 
-CMD ["node", "./src/server.js"]
+CMD ["forever", "start", "./src/server.js"]
